@@ -10,6 +10,7 @@ html {
 }
 
 body {
+  min-width: 344px;
   font-family: "Ubuntu", sans-serif;
   font-size: 1.6rem;
 }
@@ -17,6 +18,16 @@ body {
 header {
   width: 100%;
   background-color: white;
+}
+header p {
+  display: inline-block;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-right: 10px;
+  color: #FBF9FA;
+  font-weight: 900;
+  font-size: 1.8rem;
 }
 header .social-media {
   display: -webkit-box;
@@ -144,24 +155,50 @@ footer p {
   margin: 30px auto;
   max-width: 400px;
 }
-.personal-projects .projects .project_card {
+.personal-projects .projects .project__card {
   width: 100%;
   border-radius: 20px;
   overflow: hidden;
 }
-.personal-projects .projects .project_card img {
+.personal-projects .projects .project__card img {
   width: 100%;
 }
-.personal-projects .projects .project_card div {
+.personal-projects .projects .project__card .card__info {
   padding: 20px;
 }
-.personal-projects .projects .project_card:hover {
+.personal-projects .projects .project__card .buttons__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  grid-row-gap: 5px;
+  padding: 0 20px 20px 20px;
+  justify-items: center;
+}
+.personal-projects .projects .project__card .buttons__container a {
+  width: 200px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 900;
+  text-align: center;
+  display: inline-block;
+  padding: 15px 20px;
+}
+.personal-projects .projects .project__card .buttons__container .button--block {
+  color: #FBF9FA;
+  background-color: #A80038;
+}
+.personal-projects .projects .project__card .buttons__container .button--inline {
+  color: #A80038;
+  border: 2px solid #A80038;
+}
+.personal-projects .projects .project__card:hover {
   -webkit-transition: 450ms;
   transition: 450ms;
   -webkit-box-shadow: 0px 10px 20px -10px black;
           box-shadow: 0px 10px 20px -10px black;
-  cursor: pointer;
 }
+
 @media (min-width: 523px) {
   .personal-projects .projects {
     max-width: 800px;
@@ -175,5 +212,15 @@ footer p {
     max-width: none;
     -ms-grid-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1270px) {
+  .personal-projects .projects .project__card .buttons__container {
+    grid-column-gap: 5px;
+    -ms-grid-columns: 1fr 5px 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  .personal-projects .projects .project__card .buttons__container a {
+    width: 100%;
   }
 }

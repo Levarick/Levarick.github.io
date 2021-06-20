@@ -1,6 +1,14 @@
 header {
   width: 100%;
   background-color: white;
+  p {
+    display: inline-block;
+    align-self: center;
+    margin-right: 10px;
+    color: $white-color;
+    font-weight: 900;
+    font-size: 1.8rem;
+  }
 
   .social-media {
     display: flex;
