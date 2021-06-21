@@ -160,6 +160,9 @@ footer p {
   border-radius: 20px;
   overflow: hidden;
 }
+.personal-projects .projects .project__card p {
+  margin-top: 5px;
+}
 .personal-projects .projects .project__card img {
   width: 100%;
 }
@@ -174,6 +177,7 @@ footer p {
   grid-row-gap: 5px;
   padding: 0 20px 20px 20px;
   justify-items: center;
+  vertical-align: bottom;
 }
 .personal-projects .projects .project__card .buttons__container a {
   width: 200px;
