@@ -156,6 +156,10 @@ footer p {
   max-width: 400px;
 }
 .personal-projects .projects .project__card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto 1fr;
+  grid-template-rows: auto auto 1fr;
   width: 100%;
   border-radius: 20px;
   overflow: hidden;
@@ -165,11 +169,13 @@ footer p {
 }
 .personal-projects .projects .project__card img {
   width: 100%;
+  aspect-ratio: 16/9;
 }
 .personal-projects .projects .project__card .card__info {
   padding: 20px;
 }
 .personal-projects .projects .project__card .buttons__container {
+  align-self: flex-end;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;

@@ -14,6 +14,8 @@
 
 
     .project__card {
+      display: grid;
+      grid-template-rows: auto auto 1fr;
       width: 100%;
       border-radius: 20px;
       overflow: hidden;
@@ -24,12 +26,14 @@
       
       img {
         width: 100%;
+        aspect-ratio: 16/9;
       }
 
       .card__info {
         padding: 20px;
       }
       .buttons__container {
+        align-self: flex-end;
         display: grid;
         grid-template-columns: 1fr;
         grid-row-gap: 5px;
