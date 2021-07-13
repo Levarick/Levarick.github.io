@@ -1,0 +1,17 @@
+#about-me {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  svg {
+    fill: $secondary-color;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin-top: 20px;
+    line-height: 3rem;
+  }
+}
