@@ -1,15 +1,16 @@
 header {
-  display: flex;
+  overflow-x: clip;
   height: 75px;
   width: 100%;
-  padding: 15px;
   justify-content: center;
   background-color: $dark-color;
-  position: relative;
 }
 nav {
-  width: 100%;
   display: flex;
+  position: relative;
+  margin: auto;
+  padding: 15px;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
   max-width: 900px;
@@ -27,7 +28,7 @@ nav > a {
   flex-direction: column;
   gap: 20px;
   position: absolute;
-  top:75px;
+  top: 100px;
   right: 0;
   text-align: end;
   transform: translateX(100%);
@@ -42,7 +43,7 @@ nav > a {
 }
 
 .list.open {
-  transform: translateX(-50%);
+  transform: translateX(-20%);
 }
 
 
@@ -54,7 +55,7 @@ nav > a {
   justify-content: center;
   align-items: center;
   width: 70px;
-  height: 70px;
+  height: 45px;
   cursor: pointer;
   transition: all .5s ease-in-out;
 
