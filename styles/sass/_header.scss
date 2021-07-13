@@ -1,46 +1,78 @@
 header {
+  display: flex;
+  height: 75px;
   width: 100%;
-  background-color: white;
-  p {
-    display: inline-block;
-    align-self: center;
-    margin-right: 10px;
-    color: $white-color;
-    font-weight: 900;
-    font-size: 1.8rem;
-  }
+  padding: 15px;
+  justify-content: center;
+  background-color: $dark-color;
+}
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 900px;
+}
 
-  .social-media {
-    display: flex;
-    justify-content: flex-end;
-    background-color: $primary-color;
-    
-    .facebook-icon, .instagram-icon {
-      display: none;
-    }
-    
-    &__icons {
-      display: inline-block;
-      margin: 5px 5px;
+nav > a {
+  color: $primary-color;
+  text-decoration: none;
+  font-size: 4rem;
+  font-weight: 900;
+}
 
-      svg{
-        fill: $white-color;
-        height: 30px;
-        width: 30px;
-      }
-    }
-  }
-  .simple-bar {
-    display: flex;
-    align-items: center;
-    height: 50px;
+.menu-btn {
+  transform: translateX(10px);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+
+  &__hamburguer {
+    width: 50px;
+    height: 6px;
     background-color: $white-color;
-    font-weight: 900;
-    a {
-      margin-left: 10px;
-      font-size: 3rem;
-      color: black;
-      text-decoration: none;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+
+    &::before {
+      width: 50px;
+      height: 6px;
+      background-color: $white-color;
+      border-radius: 5px;
+      transition: all .5s ease-in-out;
+      position: absolute;
+      content: '';
+      transform: translateY(-16px);
+    }
+    &::after {
+      width: 50px;
+      height: 6px;
+      background-color: $white-color;
+      border-radius: 5px;
+      transition: all .5s ease-in-out;
+      position: absolute;
+      content: '';
+      transform: translateY(16px);
     }
   }
+}
+
+
+// ANIMATIONS  
+
+.menu-btn.open .menu-btn__hamburguer {
+  transform: translateX(-50px);
+  background-color: transparent;
+}
+
+.menu-btn.open .menu-btn__hamburguer::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-btn__hamburguer::after {
+  transform: rotate(-45deg) translate(35px, 35px);
 }

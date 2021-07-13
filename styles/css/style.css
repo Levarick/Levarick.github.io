@@ -15,52 +15,85 @@ body {
 }
 
 header {
-  width: 100%;
-  background-color: white;
-}
-header p {
-  display: inline-block;
-  align-self: center;
-  margin-right: 10px;
-  color: #FBF9FA;
-  font-weight: 900;
-  font-size: 1.8rem;
-}
-header .social-media {
   display: flex;
-  justify-content: flex-end;
-  background-color: #FD0054;
+  height: 75px;
+  width: 100%;
+  padding: 15px;
+  justify-content: center;
+  background-color: #151515;
 }
-header .social-media .facebook-icon, header .social-media .instagram-icon {
-  display: none;
-}
-header .social-media__icons {
-  display: inline-block;
-  margin: 5px 5px;
-}
-header .social-media__icons svg {
-  fill: #FBF9FA;
-  height: 30px;
-  width: 30px;
-}
-header .simple-bar {
+
+nav {
+  width: 100%;
   display: flex;
   align-items: center;
-  height: 50px;
-  background-color: #FBF9FA;
+  justify-content: space-between;
+  max-width: 900px;
+}
+
+nav > a {
+  color: #d35100;
+  text-decoration: none;
+  font-size: 4rem;
   font-weight: 900;
 }
-header .simple-bar a {
-  margin-left: 10px;
-  font-size: 3rem;
-  color: black;
-  text-decoration: none;
+
+.menu-btn {
+  transform: translateX(10px);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__hamburguer {
+  width: 50px;
+  height: 6px;
+  background-color: #FBF9FA;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__hamburguer::before {
+  width: 50px;
+  height: 6px;
+  background-color: #FBF9FA;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  content: "";
+  transform: translateY(-16px);
+}
+.menu-btn__hamburguer::after {
+  width: 50px;
+  height: 6px;
+  background-color: #FBF9FA;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  content: "";
+  transform: translateY(16px);
+}
+
+.menu-btn.open .menu-btn__hamburguer {
+  transform: translateX(-50px);
+  background-color: transparent;
+}
+
+.menu-btn.open .menu-btn__hamburguer::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn__hamburguer::after {
+  transform: rotate(-45deg) translate(35px, 35px);
 }
 
 footer {
   width: 100%;
   text-align: center;
-  background-color: #2B2024;
+  background-color: #151515;
   padding: 20px;
 }
 footer p {
@@ -68,53 +101,44 @@ footer p {
 }
 
 .me {
-  display: grid;
-  grid-template-columns: 1fr;
-  padding: 0 20px;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  padding: 65px 20px;
+  background: linear-gradient(to bottom, #151515, #2b2b2b);
 }
 .me__info {
-  margin: 20px;
-  border-radius: 20px;
+  position: relative;
   display: grid;
   padding: 10px;
-}
-.me__info > div {
-  display: flex;
-  align-items: center;
+  margin: 20px;
+  border-radius: 20px;
+  max-width: 320px;
+  text-align: center;
+  background-color: #151515;
+  color: #FBF9FA;
 }
 .me__info img {
-  margin: 0 auto;
-  padding: 20px;
+  margin: -110px auto 30px;
+  padding: 15px;
   width: 260px;
   border-radius: 100%;
+  border: 15px solid #d35100;
+}
+.me__info div {
+  margin: 0 10px 10px 10px;
+}
+.me__info h1 {
+  text-transform: uppercase;
 }
 .me__info p {
   margin-top: 10px;
 }
-.me__skills {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-}
-.me__skills ul {
-  margin-top: 10px;
+
+.me__container {
+  margin-top: 150px;
 }
 
-@media (min-width: 490px) {
-  .me {
-    margin: 0 auto;
-    grid-template-columns: 2fr 1fr;
-  }
-  .me__skills div {
-    padding: 20px;
-  }
-}
-@media (min-width: 760px) {
-  .me__info {
-    grid-template-columns: 1fr 2fr;
-  }
-}
 .personal-projects h2 {
   margin-top: 20px;
   text-align: center;
@@ -164,11 +188,11 @@ footer p {
 }
 .personal-projects .projects .project__card .buttons__container .button--block {
   color: #FBF9FA;
-  background-color: #A80038;
+  background-color: #f07900;
 }
 .personal-projects .projects .project__card .buttons__container .button--inline {
-  color: #A80038;
-  border: 2px solid #A80038;
+  color: #f07900;
+  border: 2px solid #f07900;
 }
 .personal-projects .projects .project__card:hover {
   transition: 450ms;
