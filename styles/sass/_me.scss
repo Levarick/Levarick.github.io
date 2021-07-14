@@ -1,25 +1,19 @@
 .me {
-  height: fit-content;
   display: flex;
   justify-content: center;
-  padding: 65px 20px;
   background: linear-gradient(to bottom, $dark-color, $dark-light-color);
   &__info {
-    position: relative;
-    display: grid;
     padding: 10px;
-    margin: 20px;
     border-radius: 20px;
-    max-width: 320px;
     text-align: center;
     background-color: $dark-color;
     box-shadow: 0px 10px 20px -10px black;
     color: $white-color;
     img {
       background-color: $dark-color;
-      margin:-130px auto 30px;
+      margin:-130px auto 10px;
       padding: 10px;
-      width: 260px;
+      width: 230px;
       border-radius: 100%;
       border: 15px solid $primary-color;
     }
@@ -42,8 +36,7 @@
 .me__social {
   display: flex;
   justify-content: center;
-  margin-top: 10px; 
-  margin-bottom: 20px;
+  margin: 10px 0;
   gap: 5px;
   a {
     aspect-ratio: 1/1;

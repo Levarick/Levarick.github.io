@@ -1,21 +1,13 @@
 .personal-projects {
-  h2 {
-    margin-top: 20px;
-    text-align: center;
-  }
 
   .projects {
     display: grid;
     grid-template-columns: 1fr;
     grid-row-gap: 20px;
     margin: 30px auto;
-    transition: 450ms;
-
 
     .project__card {
       display: grid;
-      grid-template-rows: auto auto 1fr;
-      width: 100%;
       border-radius: 20px;
       overflow: hidden;
       background: linear-gradient(127deg, $dark-color, $dark-light-color);
