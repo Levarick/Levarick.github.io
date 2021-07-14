@@ -21,6 +21,12 @@ section h2 {
   text-align: center;
 }
 
+h3 {
+  font-size: 2.4rem;
+  font-weight: lighter;
+  font-family: "Righteous", cursive;
+}
+
 body {
   background-color: #151515;
   min-width: 344px;
@@ -174,11 +180,13 @@ nav > a {
   max-width: 320px;
   text-align: center;
   background-color: #151515;
+  box-shadow: 0px 10px 20px -10px black;
   color: #FBF9FA;
 }
 .me__info img {
-  margin: -110px auto 30px;
-  padding: 15px;
+  background-color: #151515;
+  margin: -130px auto 30px;
+  padding: 10px;
   width: 260px;
   border-radius: 100%;
   border: 15px solid #d35100;
@@ -244,6 +252,8 @@ nav > a {
   width: 100%;
   border-radius: 20px;
   overflow: hidden;
+  background: linear-gradient(127deg, #151515, #2b2b2b);
+  box-shadow: 0px 10px 20px -10px black;
 }
 .personal-projects .projects .project__card p {
   margin-top: 5px;
@@ -280,10 +290,6 @@ nav > a {
 .personal-projects .projects .project__card .buttons__container .button--inline {
   color: #f07900;
   border: 2px solid #f07900;
-}
-.personal-projects .projects .project__card:hover {
-  transition: 450ms;
-  box-shadow: 0px 10px 20px -10px black;
 }
 
 @media (min-width: 768px) {
