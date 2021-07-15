@@ -10,8 +10,7 @@ html {
 }
 
 section {
-  padding-top: 65px;
-  padding-bottom: 65px;
+  padding: 65px 0;
 }
 
 section h2 {
