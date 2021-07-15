@@ -272,11 +272,10 @@ nav a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  text-align: start;
 }
 #about-me svg {
+  margin: auto;
   fill: #f07900;
   height: 50px;
   margin-bottom: 10px;
@@ -297,11 +296,29 @@ nav a {
 .personal-projects .projects .project__card {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-rows: -webkit-min-content -webkit-max-content auto;
+  -ms-grid-rows: min-content max-content auto;
+  grid-template-rows: -webkit-min-content -webkit-max-content auto;
+  grid-template-rows: min-content max-content auto;
   border-radius: 20px;
   overflow: hidden;
   background: linear-gradient(127deg, #151515, #2b2b2b);
   -webkit-box-shadow: 0px 10px 20px -10px black;
           box-shadow: 0px 10px 20px -10px black;
+}
+.personal-projects .projects .project__card > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+.personal-projects .projects .project__card > *:nth-child(2) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+.personal-projects .projects .project__card > *:nth-child(3) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
 }
 .personal-projects .projects .project__card p {
   margin-top: 5px;
@@ -319,7 +336,7 @@ nav a {
   display: grid;
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
-  grid-row-gap: 5px;
+  gap: 5px;
   padding: 0 20px 20px 20px;
   justify-items: center;
   vertical-align: bottom;
@@ -342,8 +359,31 @@ nav a {
   border: 2px solid #f07900;
 }
 
+@media (min-width: 500px) {
+  .personal-projects .projects .project__card .buttons__container {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+  }
+}
 @media (min-width: 768px) {
   .personal-projects .projects {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .personal-projects .projects .project__card .buttons__container {
+    -ms-grid-columns: initial;
+    grid-template-columns: initial;
+  }
+}
+@media (min-width: 992px) {
+  .personal-projects .projects {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .personal-projects .projects .project__card .buttons__container {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
@@ -353,13 +393,44 @@ nav a {
     -ms-grid-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
   }
+
+  .personal-projects .projects .project__card .buttons__container {
+    -ms-grid-columns: initial;
+    grid-template-columns: initial;
+  }
 }
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
-  text-align: center;
-  background-color: #151515;
-  padding: 20px;
+  height: 100px;
+  background-color: black;
 }
 footer p {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: auto;
   color: #FBF9FA;
+}
+footer a {
+  margin-top: -30px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+  padding: 20px;
+  background-color: #f07900;
+  font-weight: bold;
+  color: #FBF9FA;
+  text-decoration: none;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 10px 20px -10px black;
+          box-shadow: 0px 10px 20px -10px black;
 }

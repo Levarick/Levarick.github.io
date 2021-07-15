@@ -2,9 +2,10 @@
   .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    text-align: start;
   }
   svg {
+    margin: auto;
     fill: $secondary-color;
     height: 50px;
     margin-bottom: 10px;
