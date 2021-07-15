@@ -264,6 +264,10 @@ nav a {
   fill: #FBF9FA;
 }
 
+.hidden {
+  display: none;
+}
+
 #about-me .container {
   display: -webkit-box;
   display: -ms-flexbox;
