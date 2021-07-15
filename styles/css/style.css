@@ -53,15 +53,20 @@ body {
 }
 header {
   overflow-x: clip;
-  height: 75px;
+  height: 90px;
   width: 100%;
   justify-content: center;
   background-color: #151515;
+}
+header a svg {
+  aspect-ratio: 16/9;
+  fill: #d35100;
 }
 
 nav {
   display: flex;
   position: relative;
+  height: 100%;
   margin: auto;
   padding: 15px;
   width: 100%;
@@ -69,12 +74,9 @@ nav {
   justify-content: space-between;
   max-width: 900px;
 }
-
-nav > a {
-  color: #d35100;
-  text-decoration: none;
-  font-size: 4rem;
-  font-weight: 900;
+nav a {
+  aspect-ratio: 16/9;
+  height: 100%;
 }
 
 .list {

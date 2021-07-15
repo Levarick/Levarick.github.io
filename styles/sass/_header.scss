@@ -1,27 +1,32 @@
 header {
   overflow-x: clip;
-  height: 75px;
+  height: 90px;
   width: 100%;
   justify-content: center;
   background-color: $dark-color;
+
+  a svg {
+    aspect-ratio: 16/9;
+    fill: $primary-color;
+  }
 }
 nav {
   display: flex;
   position: relative;
+  height: 100%;
   margin: auto;
   padding: 15px;
   width: 100%;
   align-items: center;
   justify-content: space-between;
   max-width: 900px;
+
+  a {
+    aspect-ratio: 16/9;
+    height: 100%;
+  }
 }
 
-nav > a {
-  color: $primary-color;
-  text-decoration: none;
-  font-size: 4rem;
-  font-weight: 900;
-}
 
 .list {
   display: flex;
