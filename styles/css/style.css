@@ -56,11 +56,14 @@ p {
   }
 }
 header {
+  z-index: 99;
+  position: fixed;
+  top: 0;
   overflow-x: clip;
   height: 90px;
   width: 100%;
   justify-content: center;
-  background-color: #151515;
+  background-color: #181818;
 }
 header a svg {
   aspect-ratio: 16/9;
@@ -84,15 +87,18 @@ nav a {
 }
 
 .list {
+  border-radius: 0 0 0 50px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   position: absolute;
-  top: 100px;
+  padding: 30px;
+  top: 90px;
   right: 0;
   text-align: end;
   transform: translateX(100%);
   transition: transform 0.5s ease-in-out;
+  background-color: #181818;
 }
 .list li {
   list-style: none;
@@ -103,7 +109,7 @@ nav a {
 }
 
 .list.open {
-  transform: translateX(-20%);
+  transform: none;
 }
 
 .menu-btn {
