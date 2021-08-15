@@ -176,9 +176,13 @@ nav a {
   }
 }
 .me {
+  padding-top: 155px;
   display: flex;
   justify-content: center;
-  background: linear-gradient(to bottom, #151515, #2b2b2b);
+  background: linear-gradient(to bottom, #181818FF, #2b2b2b00), url("../../res/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .me__info {
   padding: 10px;
