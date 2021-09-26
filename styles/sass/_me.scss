@@ -21,6 +21,10 @@
       height: 230px;
       border-radius: 100%;
       border: 15px solid $primary-color;
+      animation-name: growing;
+      animation-duration: 3s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
     }
     div:nth-child(2) {
       margin: 0 10px 10px 10px;
@@ -32,6 +36,22 @@
       margin-top: 10px;
     }
   }
+}
+
+@keyframes growing {
+  0% {
+    border: 15px solid $primary-color;
+    transform: scale(1);
+  }
+  50% {
+    border: 15px solid transparent;
+    transform: scale(0.9);
+  }
+  100% {
+    border: 15px solid $primary-color;
+    transform: scale(1);
+  }
+
 }
 
 .me__container {
