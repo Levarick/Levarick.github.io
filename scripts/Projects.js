@@ -1,3 +1,4 @@
+import appearOnScreen from "./animations.js";
 import Project from "./classes/Project.js";
 
 var projects = [
@@ -24,7 +25,7 @@ var projects = [
   )
 ]
 
-const projectsContainer = document.getElementById("projects");
+const projectsContainer = document.querySelector(".projects");
 
 projects.map((projects) => {
   const view = `  
@@ -41,4 +42,11 @@ projects.map((projects) => {
     projectsContainer.insertAdjacentHTML('beforeend', view)
   console.log(view);
   return view;
+});
+
+//ANIMATION
+const fadeIn = document.querySelectorAll('.fadeUp-animation');
+
+fadeIn.forEach(fader => {
+  appearOnScreen.observe(fader);
 });

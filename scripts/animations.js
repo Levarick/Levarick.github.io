@@ -1,5 +1,3 @@
-const fadeIn = document.querySelectorAll('.fadeUp-animation');
-
 const appearOptions = {
 }
 
@@ -15,7 +13,5 @@ const appearOnScreen = new IntersectionObserver(
     });
   }, appearOptions);
 
-  fadeIn.forEach(fader => {
-    appearOnScreen.observe(fader);
-  }
-  )
+export default appearOnScreen;
+  
