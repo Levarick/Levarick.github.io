@@ -50,15 +50,6 @@ nav {
       text-decoration: none;
     }
     list-style: none;
-    transform-origin: center left;
-    &:hover {
-      font-weight: bold;
-      transform: scale(1.4);
-    }
-    &:hover ~ li {
-      transform: translate3d(30px, 0, 0 );
-    }
-    transition: 450ms all;
   }
 }
 
@@ -134,5 +125,16 @@ nav {
     flex-direction: initial;
     position: initial;
     transform: initial;
+    li {
+    transform-origin: center left;
+    &:hover {
+      font-weight: bold;
+      transform: scale(1.4);
+    }
+    &:hover ~ li {
+      transform: translate3d(30px, 0, 0 );
+    }
+    transition: 450ms all;
+    }
   }
 }

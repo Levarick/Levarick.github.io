@@ -114,23 +114,10 @@ nav a {
 }
 .list li {
   list-style: none;
-  -webkit-transform-origin: center left;
-          transform-origin: center left;
-  -webkit-transition: 450ms all;
-  transition: 450ms all;
 }
 .list li a {
   color: #FBF9FA;
   text-decoration: none;
-}
-.list li:hover {
-  font-weight: bold;
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
-}
-.list li:hover ~ li {
-  -webkit-transform: translate3d(30px, 0, 0);
-          transform: translate3d(30px, 0, 0);
 }
 
 .list.open {
@@ -220,6 +207,21 @@ nav a {
     position: initial;
     -webkit-transform: initial;
             transform: initial;
+  }
+  .list li {
+    -webkit-transform-origin: center left;
+            transform-origin: center left;
+    -webkit-transition: 450ms all;
+    transition: 450ms all;
+  }
+  .list li:hover {
+    font-weight: bold;
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+  }
+  .list li:hover ~ li {
+    -webkit-transform: translate3d(30px, 0, 0);
+            transform: translate3d(30px, 0, 0);
   }
 }
 .me {
