@@ -41,15 +41,10 @@ p {
 
 .container {
   padding: 0 20px;
-  max-width: 575px;
+  max-width: 550px;
   margin: auto;
 }
 
-@media (min-width: 768px) {
-  .container {
-    max-width: 758px;
-  }
-}
 @media (min-width: 992px) {
   .container {
     max-width: 982px;
@@ -383,10 +378,14 @@ nav a {
   width: 100%;
   aspect-ratio: 16/9;
 }
-.personal-projects .projects .project__card .card__info {
+.personal-projects .projects .project__card .overflow {
+  -webkit-transition: 450ms;
+  transition: 450ms;
+}
+.personal-projects .projects .project__card .overflow .card__info {
   padding: 20px;
 }
-.personal-projects .projects .project__card .buttons__container {
+.personal-projects .projects .project__card .overflow .buttons__container {
   align-self: flex-end;
   display: -ms-grid;
   display: grid;
@@ -397,7 +396,7 @@ nav a {
   justify-items: center;
   vertical-align: bottom;
 }
-.personal-projects .projects .project__card .buttons__container a {
+.personal-projects .projects .project__card .overflow .buttons__container a {
   width: 200px;
   border-radius: 40px;
   text-decoration: none;
@@ -406,13 +405,15 @@ nav a {
   display: inline-block;
   padding: 15px 20px;
 }
-.personal-projects .projects .project__card .buttons__container .button--block {
+.personal-projects .projects .project__card .overflow .buttons__container .button--block {
   color: #FBF9FA;
   background-color: #f07900;
+  max-width: 100%;
 }
-.personal-projects .projects .project__card .buttons__container .button--inline {
+.personal-projects .projects .project__card .overflow .buttons__container .button--inline {
   color: #f07900;
   border: 2px solid #f07900;
+  max-width: 100%;
 }
 
 @media (min-width: 500px) {
@@ -422,24 +423,29 @@ nav a {
     margin: 0 auto;
   }
 }
-@media (min-width: 768px) {
-  .personal-projects .projects {
+@media (min-width: 580px) {
+  .personal-projects .projects .project__card {
+    aspect-ratio: 16/9;
+  }
+  .personal-projects .projects .project__card .overflow {
+    background-color: #2b2b2b;
+  }
+  .personal-projects .projects .project__card .overflow .buttons__container {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
-
-  .personal-projects .projects .project__card .buttons__container {
-    -ms-grid-columns: initial;
-    grid-template-columns: initial;
+  .personal-projects .projects .project__card:hover .overflow {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
   }
 }
 @media (min-width: 992px) {
   .personal-projects .projects {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
+    aspect-ratio: 16/9;
   }
-
-  .personal-projects .projects .project__card .buttons__container {
+  .personal-projects .projects .project__card .overflow .buttons__container {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }

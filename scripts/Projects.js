@@ -21,7 +21,7 @@ var projects = [
     description: "Result of the Basic JavaScript Course, calculation of perimeters and volumes, percentages and measures of central tendency.",
     site: "https://levarick.github.io/curso-practico-js/",
     code: "https://github.com/Levarick/curso-practico-js/",
-    img: "./res/Interior.png" }
+    img: "./res/practicojs.png" }
   )
 ]
 
@@ -31,6 +31,7 @@ projects.map((projects) => {
   const view = `  
   <div class="project__card fadeUp-animation">
     <img src="${projects.img}" alt="">
+    <div class="overflow">
     <div class="card__info">
       <h3>${projects.name}</h3>
       <p>${projects.description}</p>
@@ -38,6 +39,7 @@ projects.map((projects) => {
     <div class="buttons__container">
       <a href="${projects.site}" target="blank_" class="button--block">See project</a>
       <a href="${projects.code}" target="blank_" class="button--inline">See code</a>
+    </div>
     </div>`
     projectsContainer.insertAdjacentHTML('beforeend', view)
   console.log(view);

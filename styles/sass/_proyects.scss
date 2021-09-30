@@ -22,34 +22,38 @@
         width: 100%;
         aspect-ratio: 16/9;
       }
-
-      .card__info {
-        padding: 20px;
-      }
-      .buttons__container {
-        align-self: flex-end;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 5px;
-        padding: 0 20px 20px 20px;
-        justify-items: center;
-        vertical-align: bottom;
-        a {
-          width: 200px;
-          border-radius: 40px;
-          text-decoration: none;
-          font-weight: 900;
-          text-align: center;
-          display: inline-block;
-          padding: 15px 20px;
+      .overflow {
+        transition: 450ms;
+        .card__info {
+          padding: 20px;
         }
-        .button--block {
-          color: $white-color;
-          background-color: $secondary-color;
-        }
-        .button--inline {
-          color: $secondary-color;
-          border: 2px solid $secondary-color;
+        .buttons__container {
+          align-self: flex-end;
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 5px;
+          padding: 0 20px 20px 20px;
+          justify-items: center;
+          vertical-align: bottom;
+          a {
+            width: 200px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 900;
+            text-align: center;
+            display: inline-block;
+            padding: 15px 20px;
+          }
+          .button--block {
+            color: $white-color;
+            background-color: $secondary-color;
+            max-width: 100%;
+          }
+          .button--inline {
+            color: $secondary-color;
+            border: 2px solid $secondary-color;
+            max-width: 100%;
+          }
         }
       }
     }
@@ -63,23 +67,30 @@
   }
 }
 
-@media (min-width:768px) {
-  .personal-projects .projects {
-    grid-template-columns: 1fr 1fr ;
+@media (min-width:580px) {
+  .personal-projects .projects .project__card {
+    aspect-ratio: 16/9;
+    .overflow {
+      background-color: $dark-light-color;
+      .buttons__container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }  
+    &:hover {
+      .overflow {
+        transform: translateY(-100%);
+      }
+    }
   }
-  .personal-projects .projects .project__card .buttons__container {
-    grid-template-columns: initial;
-  }
-  
 }
 
 @media (min-width:992px) {
-  .personal-projects .projects {
+  .personal-projects .projects  {
     grid-template-columns: 1fr 1fr ;
-  }
-
-  .personal-projects .projects .project__card .buttons__container {
-    grid-template-columns: 1fr 1fr;
+    aspect-ratio: 16/9;
+    .project__card .overflow .buttons__container {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 }
 
